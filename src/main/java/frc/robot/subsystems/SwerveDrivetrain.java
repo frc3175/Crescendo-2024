@@ -11,7 +11,7 @@ import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import java.util.Arrays;
 
 import com.ctre.phoenix6.configs.Pigeon2Configuration;
-import com.ctre.phoenix6.hardware.Pigeon2;
+import com.ctre.phoenix6.hardware.Pigeon2; //
 
 import edu.wpi.first.math.geometry.Pose2d;
 import edu.wpi.first.math.geometry.Rotation2d;
@@ -79,7 +79,7 @@ public class SwerveDrivetrain extends SubsystemBase {
         for(SwerveModule mod : m_swerveMods){
             mod.setDesiredState(swerveModuleStates[mod.moduleNumber], isOpenLoop);
         }
-        
+
     }    
 
     /* Used by SwerveControllerCommand in Auto */
