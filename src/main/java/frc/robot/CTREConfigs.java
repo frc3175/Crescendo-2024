@@ -15,49 +15,49 @@ public final class CTREConfigs {
         /** Swerve Angle Motor Configurations */
         /* Motor Inverts and Neutral Mode */
         MotorOutputConfigs angleMotorOutput = swerveAngleFXConfig.MotorOutput;
-        angleMotorOutput.Inverted = Constants.Swerve.angleMotorInvert;
-        angleMotorOutput.NeutralMode = Constants.Swerve.angleNeutralMode;
+        angleMotorOutput.Inverted = Constants.ANGLE_MOTOR_INVERT;
+        angleMotorOutput.NeutralMode = Constants.AZIMUTH_NEUTRAL_MODE;
         
         /* Current Limiting */
         CurrentLimitsConfigs angleCurrentLimits = swerveAngleFXConfig.CurrentLimits;
-        angleCurrentLimits.SupplyCurrentLimitEnable = Constants.Swerve.angleEnableCurrentLimit;
-        angleCurrentLimits.SupplyCurrentLimit = Constants.Swerve.angleCurrentLimit;
-        angleCurrentLimits.SupplyCurrentThreshold = Constants.Swerve.angleCurrentThreshold;
-        angleCurrentLimits.SupplyTimeThreshold = Constants.Swerve.angleCurrentThresholdTime;
+        angleCurrentLimits.SupplyCurrentLimitEnable = Constants.AZIMUTH_ENABLE_CURRENT_LIMIT;
+        angleCurrentLimits.SupplyCurrentLimit = Constants.AZIMUTH_CURRENT_LIMIT;
+        angleCurrentLimits.SupplyCurrentThreshold = Constants.AZIMUTH_CURRENT_THRESHOLD;
+        angleCurrentLimits.SupplyTimeThreshold = Constants.AZIMUTH_CURRENT_THRESHOLD_TIME;
 
         /* PID Config */
         Slot0Configs angleSlot0 = swerveAngleFXConfig.Slot0;
-        angleSlot0.kP = Constants.Swerve.angleKP;
-        angleSlot0.kI = Constants.Swerve.angleKI;
-        angleSlot0.kD = Constants.Swerve.angleKD;
+        angleSlot0.kP = Constants.AZIMUTH_P;
+        angleSlot0.kI = Constants.AZIMUTH_I;
+        angleSlot0.kD = Constants.AZIMUTH_D;
 
         /** Swerve Drive Motor Configuration */
         /* Motor Inverts and Neutral Mode */
         var driveMotorOutput = swerveDriveFXConfig.MotorOutput;
-        driveMotorOutput.Inverted = Constants.Swerve.driveMotorInvert;
-        driveMotorOutput.NeutralMode = Constants.Swerve.driveNeutralMode;
+        driveMotorOutput.Inverted = Constants.DRIVE_MOTOR_INVERT;
+        driveMotorOutput.NeutralMode = Constants.DRIVE_NEUTRAL_MODE;
 
         /* Current Limiting */
         var driveCurrentLimits = swerveDriveFXConfig.CurrentLimits;
-        driveCurrentLimits.SupplyCurrentLimitEnable = Constants.Swerve.driveEnableCurrentLimit;
-        driveCurrentLimits.SupplyCurrentLimit = Constants.Swerve.driveCurrentLimit;
-        driveCurrentLimits.SupplyCurrentThreshold = Constants.Swerve.driveCurrentThreshold;
-        driveCurrentLimits.SupplyTimeThreshold = Constants.Swerve.driveCurrentThresholdTime;
+        driveCurrentLimits.SupplyCurrentLimitEnable = Constants.DRIVE_ENABLE_CURRENT_LIMIT;
+        driveCurrentLimits.SupplyCurrentLimit = Constants.DRIVE_CURRENT_THRESHOLD_TIME;
+        driveCurrentLimits.SupplyCurrentThreshold = Constants.DRIVE_CURRENT_THRESHOLD;
+        driveCurrentLimits.SupplyTimeThreshold = Constants.DRIVE_CURRENT_THRESHOLD_TIME;
 
         /* PID Config */
         var driveSlot0 = swerveDriveFXConfig.Slot0;
-        driveSlot0.kP = Constants.Swerve.driveKP;
-        driveSlot0.kI = Constants.Swerve.driveKI;
-        driveSlot0.kD = Constants.Swerve.driveKD;
+        driveSlot0.kP = Constants.DRIVE_P;
+        driveSlot0.kI = Constants.DRIVE_I;
+        driveSlot0.kD = Constants.DRIVE_D;
 
         /* Open and Closed Loop Ramping */
-        swerveDriveFXConfig.OpenLoopRamps.DutyCycleOpenLoopRampPeriod = Constants.Swerve.openLoopRamp;
-        swerveDriveFXConfig.OpenLoopRamps.VoltageOpenLoopRampPeriod = Constants.Swerve.openLoopRamp;
+        swerveDriveFXConfig.OpenLoopRamps.DutyCycleOpenLoopRampPeriod = Constants.OPEN_LOOP_RAMP;
+        swerveDriveFXConfig.OpenLoopRamps.VoltageOpenLoopRampPeriod = Constants.OPEN_LOOP_RAMP;
 
-        swerveDriveFXConfig.ClosedLoopRamps.DutyCycleClosedLoopRampPeriod = Constants.Swerve.closedLoopRamp;
-        swerveDriveFXConfig.ClosedLoopRamps.VoltageClosedLoopRampPeriod = Constants.Swerve.closedLoopRamp;
+        swerveDriveFXConfig.ClosedLoopRamps.DutyCycleClosedLoopRampPeriod = Constants.CLOSED_LOOP_RAMP;
+        swerveDriveFXConfig.ClosedLoopRamps.VoltageClosedLoopRampPeriod = Constants.CLOSED_LOOP_RAMP;
         
         /** Swerve CANCoder Configuration */
-        swerveCANcoderConfig.MagnetSensor.SensorDirection = Constants.Swerve.cancoderInvert;
+        swerveCANcoderConfig.MagnetSensor.SensorDirection = Constants.CANCODER_INVERT;
     }
 }

@@ -32,8 +32,8 @@ public class SwerveDrive extends Command {
         m_robotCentricSup = robotCentricSup;
         m_isEvading = isEvading;
 
-        m_xAxisLimiter = new SlewRateLimiter(Constants.Swerve.RATE_LIMITER);
-        m_yAxisLimiter = new SlewRateLimiter(Constants.Swerve.RATE_LIMITER);
+        m_xAxisLimiter = new SlewRateLimiter(Constants.RATE_LIMITER);
+        m_yAxisLimiter = new SlewRateLimiter(Constants.RATE_LIMITER);
 
     }
 
@@ -53,8 +53,8 @@ public class SwerveDrive extends Command {
 
         /* Drive */
         m_swerveDrivetrain.drive(
-            new Translation2d(xAxisFiltered, yAxisFiltered).times(Constants.Swerve.maxSpeed), 
-            rAxisSquared * Constants.Swerve.maxAngularVelocity, 
+            new Translation2d(xAxisFiltered, yAxisFiltered).times(Constants.MAX_SPEED), 
+            rAxisSquared * Constants.MAX_ANGULAR_VELOCITY, 
             !m_robotCentricSup.getAsBoolean(), 
             true,
             m_isEvading.getAsBoolean()
